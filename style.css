@@ -1,0 +1,57 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  background-color: var(--bg);
+  color: var(--text);
+  transition: background-color 0.3s, color 0.3s;
+}
+:root {
+  --bg: #fff;
+  --text: #000;
+}
+.dark {
+  --bg: #121212;
+  --text: #f1f1f1;
+}
+header {
+  background: #333;
+  padding: 1em;
+}
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  padding: 0;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+}
+section {
+  padding: 2em;
+}
+.project-list {
+  display: grid;
+  gap: 1em;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+.project-item {
+  background: #ddd;
+  padding: 1em;
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+.project-item:hover {
+  transform: scale(1.05);
+}
+footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 1em;
+}
+form input, form textarea {
+  display: block;
+  width: 100%;
+  margin-bottom: 1em;
+}
