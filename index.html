@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>My Personal Website</title>
+  <title>Christopher Akwabi - Portfolio</title>
   <link rel="stylesheet" href="style.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
 </head>
@@ -28,8 +28,10 @@
 
   <section id="about">
     <h2>About Me</h2>
-    <img src="assets/profile.jpg" alt="Profile Image"/>
-    <p>Hi! I’m a developer who loves coding, coffee, and creativity.</p>
+    <img class="profile-img" src="assets/profile.jpg" alt="Christopher Akwabi"/>
+    <p>Hi! I'm <strong>Christopher Akwabi</strong>, a passionate web developer and tech enthusiast currently in my final year at <strong>United States International University - Africa (USIU)</strong>. I love building practical, impactful solutions with code, and I'm constantly exploring new ways to blend creativity with technology.</p>
+
+    <p>Whether it's frontend design or backend logic, I enjoy solving problems and creating experiences that are both functional and user-friendly. When I'm not coding, you'll find me learning new frameworks, writing blog posts, or experimenting with creative UI ideas.</p>
 
     <h3>My Skills</h3>
     <div class="skills">
@@ -45,6 +47,14 @@
         <label>JavaScript</label>
         <div class="bar"><div class="progress" style="width: 80%;"></div></div>
       </div>
+      <div>
+        <label>React.js</label>
+        <div class="bar"><div class="progress" style="width: 75%;"></div></div>
+      </div>
+      <div>
+        <label>Node.js</label>
+        <div class="bar"><div class="progress" style="width: 70%;"></div></div>
+      </div>
     </div>
   </section>
 
@@ -56,13 +66,13 @@
       <button onclick="filterProjects('data')">Data</button>
     </div>
     <div class="project-list" id="projectList">
-      <div class="project-item web" onclick="openModal('Project 1')">
-        <img src="assets/project1.jpg" alt="Project 1">
-        <p>Web Project 1</p>
+      <div class="project-item web" onclick="openModal('MyFundi Platform')">
+        <img src="assets/myfundi.png" alt="MyFundi">
+        <p><strong>MyFundi</strong> - A job connection platform for clients and artisans</p>
       </div>
-      <div class="project-item data" onclick="openModal('Data Analysis')">
-        <img src="assets/project1.jpg" alt="Project 2">
-        <p>Data Project</p>
+      <div class="project-item data" onclick="openModal('Portfolio Website')">
+        <img src="assets/project1.jpg" alt="Personal Website">
+        <p><strong>Personal Website</strong> - Responsive site with full JavaScript interactivity</p>
       </div>
     </div>
   </section>
@@ -71,7 +81,7 @@
     <div class="modal-content">
       <span onclick="closeModal()" class="close">&times;</span>
       <h2 id="modalTitle"></h2>
-      <p>More information about the selected project will go here.</p>
+      <p id="modalDesc">More information about the selected project will go here.</p>
     </div>
   </div>
 
@@ -92,7 +102,7 @@
   </section>
 
   <footer>
-    <p>© 2025 Me. Built with ❤️ and JavaScript.</p>
+    <p>© 2025 Christopher Akwabi. Built with ❤️ and JavaScript.</p>
   </footer>
 
   <script src="script.js"></script>
