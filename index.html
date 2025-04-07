@@ -5,8 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>My Personal Website</title>
   <link rel="stylesheet" href="style.css"/>
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
 </head>
 <body>
@@ -14,7 +12,7 @@
     <nav>
       <ul>
         <li><a href="#home" class="nav-link">Home</a></li>
-        <li><a href="#about" class="nav-link">About Me</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
         <li><a href="#projects" class="nav-link">Projects</a></li>
         <li><a href="#blog" class="nav-link">Blog</a></li>
         <li><a href="#contact" class="nav-link">Contact</a></li>
@@ -25,28 +23,57 @@
 
   <section id="home">
     <h1 id="greeting">Welcome!</h1>
-    <p>This is my personal website. Feel free to explore.</p>
+    <p>This is my personal space on the web. Explore and connect!</p>
   </section>
 
   <section id="about">
     <h2>About Me</h2>
-    <img src="https://via.placeholder.com/150" alt="My photo"/>
-    <p>Hello! I'm a web developer passionate about building interactive experiences.</p>
+    <img src="assets/profile.jpg" alt="Profile Image"/>
+    <p>Hi! I’m a developer who loves coding, coffee, and creativity.</p>
+
+    <h3>My Skills</h3>
+    <div class="skills">
+      <div>
+        <label>HTML</label>
+        <div class="bar"><div class="progress" style="width: 90%;"></div></div>
+      </div>
+      <div>
+        <label>CSS</label>
+        <div class="bar"><div class="progress" style="width: 85%;"></div></div>
+      </div>
+      <div>
+        <label>JavaScript</label>
+        <div class="bar"><div class="progress" style="width: 80%;"></div></div>
+      </div>
+    </div>
   </section>
 
   <section id="projects">
-    <h2>Projects Portfolio</h2>
+    <h2>Projects</h2>
     <div id="projectFilters">
       <button onclick="filterProjects('all')">All</button>
       <button onclick="filterProjects('web')">Web</button>
       <button onclick="filterProjects('data')">Data</button>
     </div>
     <div class="project-list" id="projectList">
-      <div class="project-item web">Web Project 1</div>
-      <div class="project-item data">Data Project 1</div>
-      <div class="project-item web">Web Project 2</div>
+      <div class="project-item web" onclick="openModal('Project 1')">
+        <img src="assets/project1.jpg" alt="Project 1">
+        <p>Web Project 1</p>
+      </div>
+      <div class="project-item data" onclick="openModal('Data Analysis')">
+        <img src="assets/project1.jpg" alt="Project 2">
+        <p>Data Project</p>
+      </div>
     </div>
   </section>
+
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span onclick="closeModal()" class="close">&times;</span>
+      <h2 id="modalTitle"></h2>
+      <p>More information about the selected project will go here.</p>
+    </div>
+  </div>
 
   <section id="blog">
     <h2>Blog</h2>
@@ -65,7 +92,7 @@
   </section>
 
   <footer>
-    <p>© 2025 My Website</p>
+    <p>© 2025 Me. Built with ❤️ and JavaScript.</p>
   </footer>
 
   <script src="script.js"></script>
