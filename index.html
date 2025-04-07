@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Personal Website</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#about" class="nav-link">About Me</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#blog" class="nav-link">Blog</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li><button id="themeToggle">🌓</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home">
+    <h1 id="greeting">Welcome!</h1>
+    <p>This is my personal website. Feel free to explore.</p>
+  </section>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <img src="https://via.placeholder.com/150" alt="My photo"/>
+    <p>Hello! I'm a web developer passionate about building interactive experiences.</p>
+  </section>
+
+  <section id="projects">
+    <h2>Projects Portfolio</h2>
+    <div id="projectFilters">
+      <button onclick="filterProjects('all')">All</button>
+      <button onclick="filterProjects('web')">Web</button>
+      <button onclick="filterProjects('data')">Data</button>
+    </div>
+    <div class="project-list" id="projectList">
+      <div class="project-item web">Web Project 1</div>
+      <div class="project-item data">Data Project 1</div>
+      <div class="project-item web">Web Project 2</div>
+    </div>
+  </section>
+
+  <section id="blog">
+    <h2>Blog</h2>
+    <input type="text" id="blogSearch" placeholder="Search blog..."/>
+    <div id="blogPosts"></div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form id="contactForm">
+      <input type="text" id="name" placeholder="Your Name" required/>
+      <input type="email" id="email" placeholder="Your Email" required/>
+      <textarea id="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 My Website</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
