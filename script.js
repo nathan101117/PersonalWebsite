@@ -57,22 +57,33 @@ function closeModal() {
   document.getElementById("modal").style.display = "none";
 }
 
-// Blog
 const blogData = [
-  { title: "Welcome Post", content: "Hey there! Thanks for visiting." },
-  { title: "CSS Grid vs Flexbox", content: "Let’s compare two layout systems." },
-  { title: "Debugging JS", content: "Console.log is your best friend." }
+  {
+    title: "Welcome to My Portfolio",
+    content: "This blog is a space where I share insights, reflections, and lessons I've learned on my journey as a developer, student, and innovator. Thanks for stopping by!"
+  },
+  {
+    title: "Building MyFundi: From Concept to Code",
+    content: "MyFundi started as a simple idea — to connect artisans with clients more efficiently. I designed it as a full-stack platform using React, Node.js, and MongoDB. Features include real-time job tracking, payment splitting, and a wallet system. The project taught me the importance of planning, UI/UX, and working with complex backend logic."
+  },
+  {
+    title: "Balancing Tech & Studies at USIU",
+    content: "As a 4th-year student at USIU, managing time between school and coding projects hasn’t been easy. But it’s helped me master productivity and focus. I’ve learned that consistent effort > burnout sprints — and making time to rest is just as important."
+  },
+  {
+    title: "Dark Mode in JavaScript — The Easy Way",
+    content: "Want to build a light/dark theme switcher in JavaScript? It's easier than you think. Use `classList.toggle('dark')`, store preferences in `localStorage`, and you’ve got a beautiful, accessible theme toggle."
+  },
+  {
+    title: "Debugging Like a Pro",
+    content: "The best tool in your dev belt? `console.log()`. Seriously. But also — use breakpoints, `try/catch`, and browser DevTools to inspect the DOM, track performance, and crush bugs faster."
+  },
+  {
+    title: "Future Plans After Graduation",
+    content: "After USIU, I’m aiming to join a forward-thinking dev team, sharpen my full-stack skills, and eventually build SaaS tools that solve real African problems — especially in tech education and e-commerce."
+  }
 ];
-function renderBlogPosts(data = blogData) {
-  const container = document.getElementById("blogPosts");
-  container.innerHTML = data.map(post => `<h3>${post.title}</h3><p>${post.content}</p>`).join('');
-}
-renderBlogPosts();
-document.getElementById("blogSearch").addEventListener("input", (e) => {
-  const val = e.target.value.toLowerCase();
-  const filtered = blogData.filter(post => post.title.toLowerCase().includes(val));
-  renderBlogPosts(filtered);
-});
+
 
 // Form Validation
 document.getElementById("contactForm").addEventListener("submit", function (e) {
