@@ -83,7 +83,7 @@ const blogData = [
     content: "After USIU, I’m aiming to join a forward-thinking dev team, sharpen my full-stack skills, and eventually build SaaS tools that solve real African problems — especially in tech education and e-commerce."
   }
 ];
-
+renderBlogPosts();
 
 // Form Validation
 document.getElementById("contactForm").addEventListener("submit", function (e) {
