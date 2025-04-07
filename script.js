@@ -45,6 +45,13 @@ function filterProjects(category) {
 function openModal(title) {
   document.getElementById("modal").style.display = "block";
   document.getElementById("modalTitle").textContent = title;
+
+  const descriptions = {
+    "MyFundi Platform": "MyFundi is a full-stack job connection platform that links clients with artisans. It includes user authentication, wallet integration, payment splitting logic, and admin dashboards. Built with React, Node.js, and MongoDB.",
+    "Portfolio Website": "This site you're browsing! A fully responsive personal portfolio using HTML5, CSS3, and JavaScript, showcasing projects and blog posts with interactive features and dark mode."
+  };
+
+  document.getElementById("modalDesc").textContent = descriptions[title] || "More information about the selected project will go here.";
 }
 function closeModal() {
   document.getElementById("modal").style.display = "none";
