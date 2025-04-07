@@ -91,3 +91,13 @@ form input, form textarea {
   top: 10px; right: 15px;
   cursor: pointer;
 }
+form input,
+form textarea {
+  height: 35px;
+  padding: 5px;
+}
+form textarea {
+  height: 80px;
+  resize: vertical;
+}
+
